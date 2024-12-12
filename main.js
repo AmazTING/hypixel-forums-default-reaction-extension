@@ -107,9 +107,11 @@ async function updateReactionButtons() {
 	const reactButtons = document.querySelectorAll(
 		"a.actionBar-action.actionBar-action--sv-rate"
 	);
-	const icons = document.querySelectorAll(
-		"img.sv-rating-type-icon.sv-rating-type-icon1.sv-rating-type-icon--sprite1"
-	);
+	const iconsHolders = document.querySelectorAll("div.sv-rating-type__icon");
+	let icons = []
+	for (i = 0; i < iconsHolders.length; i++) {
+		icons.push(iconsHolders[i].querySelector("img"))
+	}
 
 	// Update buttons and icons dynamically
 	reactButtons.forEach((button) => {
