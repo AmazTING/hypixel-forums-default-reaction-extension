@@ -1,0 +1,15 @@
+{
+  "content_scripts": [
+    {
+      "js": ["main.js"],
+      "matches": ["https://hypixel.net/members/*", "https://hypixel.net/conversations/*", "https://hypixel.net/threads/*", "https://hypixel.net/account/preferences"]
+    }
+  ],
+  "manifest_version": 3,
+  "name": "Hypixel Default Reactor",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "version": "1.0.0"
+}
