@@ -73,7 +73,8 @@ function injectDropdown() {
             <option value="3">Funny</option> 
             <option value="9">Useful</option> 
             <option value="4">Creative</option> 
-            <option value="11">Hype Train</option> 
+            <option value="11">Hype Train</option>
+												<option value="17">MVP++ Gold</option>
             <option value="5">Dislike</option> 
             <option value="8">Disagree</option> 
           </select> 
@@ -98,6 +99,7 @@ async function updateReactionButtons() {
 		"9": "Useful",
 		"4": "Creative",
 		"11": "Hype Train",
+		"17": "MVP++ Gold",
 		"5": "Dislike",
 		"8": "Disagree",
 	};
