@@ -2,7 +2,7 @@
   "content_scripts": [
     {
       "js": ["main.js"],
-      "matches": ["https://hypixel.net/members/*", "https://hypixel.net/conversations/*", "https://hypixel.net/threads/*", "https://hypixel.net/account/preferences"]
+      "matches": ["https://hypixel.net/members/*", "https://hypixel.net/conversations/*", "https://hypixel.net/threads/*", "https://hypixel.net/whats-new/*", "https://hypixel.net/account/preferences"]
     }
   ],
   "manifest_version": 3,
