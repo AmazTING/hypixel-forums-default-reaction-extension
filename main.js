@@ -140,6 +140,7 @@ async function updateReactionButtons() {
 	});
 }
 
+/*
 const observer = new MutationObserver((mutationsList, observer) => {
   updateReactionButtons()
 });
@@ -150,7 +151,7 @@ observer.observe(document.body, {
   subtree: true,
   characterData: true
 });
-
+*/
 // Main logic
 (async function main() {
 	// Run only on the preferences page
