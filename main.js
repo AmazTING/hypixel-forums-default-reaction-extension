@@ -117,7 +117,9 @@ async function updateReactionButtons() {
 
 	// Update buttons and icons dynamically
 	reactButtons.forEach((button) => {
-		button.href = button.href.slice(0, -1) + reactionValue;
+		let parts = button.href.split("=");
+		parts[parts.length - 1] = reactionValue;
+		button.href = parts.join("=");
 	});
 
 	icons.forEach((icon) => {
@@ -138,6 +140,16 @@ async function updateReactionButtons() {
 	});
 }
 
+const observer = new MutationObserver((mutationsList, observer) => {
+  updateReactionButtons()
+});
+
+observer.observe(document.body, {
+  attributes: true,
+  childList: true,
+  subtree: true,
+  characterData: true
+});
 
 // Main logic
 (async function main() {
