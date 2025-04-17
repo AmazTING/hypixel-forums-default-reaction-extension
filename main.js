@@ -140,6 +140,16 @@ async function updateReactionButtons() {
 	});
 }
 
+const observer = new MutationObserver((mutationsList, observer) => {
+  updateReactionButtons()
+});
+
+observer.observe(document.body, {
+  attributes: true,
+  childList: true,
+  subtree: true,
+  characterData: true
+});
 
 // Main logic
 (async function main() {
